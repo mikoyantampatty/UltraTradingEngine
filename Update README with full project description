@@ -63,8 +63,6 @@ Investigation is required to determine whether this is a broker‑side restricti
 a symbol‑suffix mismatch (e.g., `EURGBP#` or `.micro`), or an MT5 server configuration issue.  
 A robust auto‑detection and filtering mechanism is planned to prevent the bot from selecting non‑tradeable symbols.
 
-
-
 ---
 
 ## License
