@@ -41,6 +41,30 @@ It combines:
 - Need automatic detection of tradeable symbols and dynamic `.env` update.  
 - Funding required for further live testing and maintaining development tools.
 
+## Example Issue – Averaging Logic Not Triggering
+A current difficulty appears in live demo trading, especially with symbols containing the "#" suffix.  
+When the system opens an initial BUY position and the candle immediately turns bearish,  
+the averaging logic should trigger: hold the BUY but simultaneously open a SELL position.  
+This counter‑position would allow the bot to profit regardless of candle direction.  
+
+However, in the current build the averaging module does not trigger correctly,  
+so the bot holds only the BUY trades. This causes losses when price reverses sharply.  
+Fixing this behavior and ensuring averaging activates under the correct conditions is a primary goal for upcoming updates.
+
+---
+
+## Example Issue – Inconsistent Trade Availability on Forex Pairs
+Another issue occurs with certain Forex pairs configured in `.env`.  
+Some symbols are fully visible and active in Market Watch,  
+but the MetaTrader5 Python API returns "trade disabled" when attempting to open trades.  
+
+This is inconsistent: some pairs trade perfectly, others fail despite being active.  
+Investigation is required to determine whether this is a broker‑side restriction,  
+a symbol‑suffix mismatch (e.g., `EURGBP#` or `.micro`), or an MT5 server configuration issue.  
+A robust auto‑detection and filtering mechanism is planned to prevent the bot from selecting non‑tradeable symbols.
+
+
+
 ---
 
 ## License
