@@ -76,3 +76,18 @@ All Rights Reserved — this repository is for **demonstration and documentation
 This project represents my only real chance to improve my life.  
 If you are able to provide **technical advice, mentorship, funding, or collaboration**, please get in touch.  
 Every suggestion or support will be deeply appreciated.
+
+---
+
+## Future Vision – Toward an AI‑Driven Trading System
+
+The ultimate goal of **UltraTradingEngine** is to evolve into a fully‑autonomous trading system powered by **real artificial intelligence and machine learning**.  
+When sufficient resources become available, several upgrades are planned:
+
+1. **Deep Learning Integration** – incorporate reinforcement and recurrent neural‑network models to detect high‑probability setups.
+2. **Deep Thinking Layer** – decision‑tree based reasoning that evaluates multiple market contexts before placing any order.
+3. **Continuous Data Collection & Retraining** – build a long‑term dataset of tick data, indicators, and decision outcomes to constantly retrain the models.
+4. **Risk‑Adaptive Engine** – dynamically adjust exposure and strategy choice according to confidence metrics from the AI models.
+5. **Cloud‑Native Infrastructure** – move execution and retraining to scalable cloud services to handle larger datasets and faster back‑testing.
+
+This vision represents a move from rule‑based algorithmic trading toward a truly intelligent, self‑improving trading system built in Indonesia from limited resources but with limitless determination.
