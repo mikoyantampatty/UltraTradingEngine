@@ -1,0 +1,54 @@
+# UltraTradingEngine – AI‑Powered Multi‑Strategy Forex Trading Bot
+
+## Overview
+UltraTradingEngine is a personal Forex trading system developed entirely from scratch by **a 52‑year‑old part‑time driver in Indonesia with no formal education or engineering background**.  
+By learning Python, MetaTrader5 API, and trading logic little by little, this project grew into a fully‑automated multi‑strategy bot.
+
+The engine coordinates several strategies in parallel and executes orders through the MetaTrader5 Python API.  
+It combines:
+
+- **Multi‑Timeframe Scalping** – short‑term trading from M1 → H4, using majority‑trend confirmation  
+- **Whale Volatility Filter** – lot adaptation when volatility spikes  
+- **Dynamic Lot Scaling** – adjusts lot sizes by free margin and risk consistency  
+- **Pair‑Specific Optimization** – special parameters for GOLD#, BTCUSD#, etc.  
+- **Parallel Multi‑Strategy Core** – Mean Reversion, Breakout, Intraday Swing, Trend Following EMA  
+- **AI Bandit Integration** – reinforcement‑learning layer to fine‑tune confidence scores  
+
+---
+
+## Technical Architecture
+
+
+### Flow
+1. **Symbol Resolution** – verifies `.env` pairs against broker instrument list (handles XM suffix `#`).  
+2. **Data Loading** – retrieves OHLCV data using `mt5.copy_rates_from_pos()`.  
+3. **Signal Generation** – each strategy produces a signal and confidence score.  
+4. **Decision Fusion** – chooses strongest signal or runs multiple in parallel if valid.  
+5. **Order Execution** – sends MT5 orders, logs results, updates daily & weekly performance.
+
+---
+
+## Key Features
+- Works with broker‑specific symbol naming (e.g., `USDJPY#`, `GOLD#`, `.micro`).  
+- Confidence‑gate avoids low‑probability trades.  
+- AI‑adjusted decision layer powered by a simple bandit reinforcement model.  
+- Built‑in risk consistency manager scaling exposure based on drawdown history.
+
+---
+
+## Current Challenges
+- Some XM broker symbols return `trade disabled` via API although active in Market Watch.  
+- Need automatic detection of tradeable symbols and dynamic `.env` update.  
+- Funding required for further live testing and maintaining development tools.
+
+---
+
+## License
+All Rights Reserved — this repository is for **demonstration and documentation only**.
+
+---
+
+### Final Note
+This project represents my only real chance to improve my life.  
+If you are able to provide **technical advice, mentorship, funding, or collaboration**, please get in touch.  
+Every suggestion or support will be deeply appreciated.
