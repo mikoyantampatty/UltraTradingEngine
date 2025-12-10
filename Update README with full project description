@@ -51,6 +51,9 @@ However, in the current build the averaging module does not trigger correctly,
 so the bot holds only the BUY trades. This causes losses when price reverses sharply.  
 Fixing this behavior and ensuring averaging activates under the correct conditions is a primary goal for upcoming updates.
 
+![Open Positions Loss](https://raw.githubusercontent.com/mikoyantampatty/UltraTradingEngine/refs/heads/main/Screenshot_2025-12-10-10-17-29-45_1cf64f36b0e92d63ff3394f68506677a.jpg)
+
+
 ---
 
 ## Example Issue – Inconsistent Trade Availability on Forex Pairs
